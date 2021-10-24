@@ -12,3 +12,8 @@ def login():
     if request.method == 'GET':
         return render_template('login.html')
 
+@app.route('/menu', methods=['GET','POST'])
+def menu():
+    if request.method == 'GET':
+        return render_template('menuPlatos.html')
+
