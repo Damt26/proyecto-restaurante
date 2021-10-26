@@ -1,0 +1,188 @@
+{% extends "layout/plantilla.html" %}
+{% block content %}
+<div class="container-fluid">
+  <div class="row mt-4">
+    <div class="col-md-12">
+      <h1 class="text-center">Bienvenido</h1>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-md-2 col-sm-12">
+      <ul class="nav nav-tabs flex-column" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <a class="nav-link active" id="principal-tab" data-toggle="tab" href="#principal" role="tab"
+            aria-controls="home" aria-selected="true">Principal</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" id="usuarios-tab" data-toggle="collapse" href="#usuarios"
+            aria-selected="true">Usuarios</a>
+          <div id="usuarios" class="collapse">
+            <ul class="nav nav-tabs flex-column" id="mySubTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <a href="#verUsuarios" class="nav-link" id="verUsuarios-tab" data-toggle="tab" role="tab"
+                  aria-controls="verUsuarios" aria-selected="false">- Listar Usuarios</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a href="#crearUsuario" class="nav-link" id="crearUsuario-tab" data-toggle="tab" role="tab"
+                  aria-controls="crearUsuario" aria-selected="false">- Crear Usuario</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a href="#consultarUsuario" class="nav-link" id="consultarUsuario-tab" data-toggle="tab" role="tab"
+                  aria-controls="consultarUsuario" aria-selected="false">- Consultar Usuario</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" id="platos-tab" data-toggle="tab" href="#platos" role="tab" aria-controls="platos"
+            aria-selected="false">Platos</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" id="comentarios-tab" data-toggle="tab" href="#comentarios" role="tab"
+            aria-controls="comentarios" aria-selected="false">Comentarios</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" id="pedidos-tab" data-toggle="tab" href="#pedidos" role="tab" aria-controls="pedidos"
+            aria-selected="false">Pedidos</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" id="listdeseos-tab" data-toggle="tab" href="#lista-deseos" role="tab" aria-controls="lista-deseos"
+            aria-selected="false">Lista de deseos</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" id="roles-tab" data-toggle="tab" href="#roles" role="tab" aria-controls="roles"
+            aria-selected="false">Roles</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-10 col-sm-12">
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="Principal" role="tabpanel" aria-labelledby="principal-tab">.snns.
+        </div>
+        <div class="tab-pane fade" id="verUsuarios" role="tabpanel" aria-labelledby="verUsuarios-tab">
+          <h1>Aqui va un listado de los usuarios que se consultan mediante la base de datos</h1>
+        </div>
+        <div class="tab-pane fade" id="crearUsuario" role="tabpanel" aria-labelledby="crearUsuario-tab">
+          <div class="row align-items-center">
+            <div class="col-md-10">
+                <h1 class="text-center">Crear usuario</h1>
+                <!----------Formulario de creacion de usuarios------------>
+                <form action="" method="post" class="form-inline mt-4">
+                  <div class="form-row w-100">
+                    <div class="col-lg-3 col-md-6 col-sm-6" >
+                      <label for="tipo_identificacion" class="mt-2">Tipo de identificacion</label>   
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                      <select name="tipo_identificacion" id="tipo_identificacion" class="form-control">
+                        <option value="-1">--Seleccione una opcion--</option>
+                      </select>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                      <label for="identificacion" class="mt-2">Identificacion</label>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                      <input type="text" class="form-control" id="identificacion" placeholder="ingrese identificacion">
+                    </div>
+                  </div>
+                  <div class="form-row w-100 mt-3">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                      <label for="nombres" class="mt-2">Nombres</label>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                      <input type="text" class="form-control" id="nombres" placeholder="ingrese nombres">
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                      <label for="apellidos" class="mt-2">Apellidos</label>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                      <input type="text" class="form-control" placeholder="ingrese apellidos" id="apellidos">
+                    </div>
+                  </div>
+                  <div class="form-row w-100 mt-3">
+                    <div class="col-lg-3 col-md-6 col-sm-6" >
+                      <label for="genero" class="mt-2">Genero</label>   
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                      <select name="genero" id="genero" class="form-control">
+                        <option value="-1">--Seleccione una opcion--</option>
+                      </select>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                      <label for="direccion" class="mt-2">Direccion</label>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                      <input type="text" class="form-control" id="direccion" placeholder="ingrese direccion">
+                    </div>
+                  </div>
+                  <div class="form-row w-100 mt-3">
+                    <div class="col-lg-3 col-md-6 col-sm-6" >
+                      <label for="ciudad" class="mt-2">Ciudad</label>   
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                      <select name="ciudad" id="ciudad" class="form-control">
+                        <option value="-1">--Seleccione una opcion--</option>
+                      </select>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                      <label for="telefono" class="mt-2">Teléfono</label>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                      <input type="text" class="form-control" id="telefono" placeholder="ingrese telefono">
+                    </div>
+                  </div>
+                  <div class="form-row w-100 mt-3">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                      <label for="fech_nac" class="mt-2">fecha de nacimiento</label>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                      <input type="date" class="form-control" id="fech_nac" >
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                      <label for="email" class="mt-2">Email</label>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                      <input type="email" class="form-control" placeholder="ingrese email" id="email">
+                    </div>
+                  </div>
+                  <div class="form-row w-100 mt-3">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                      <label for="usuario" class="mt-2">Usuario</label>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                      <input type="text" class="form-control" id="usuario" placeholder="nombre de usuario" >
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                      <label for="passwd" class="mt-2">Contraseña</label>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                      <input type="password" class="form-control" placeholder="ingrese Contraseña" id="passwd">
+                    </div>
+                  </div>
+                  <div class="row w-100 mt-4 align-items-center">
+                    <div class="col-lg-12 col-md-6 offset-md-6 offset-sm-2">
+                      <input type="submit" value="Guardar" id="guardar" class="btn btn-primary">
+                    </div>
+                  </div>
+                  
+                </form><!-------Fin de formulario------------->
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="consultarUsuario" role="tabpanel" aria-labelledby="consultarUsuario-tab">
+          .ffddfadds..</div>
+        <div class="tab-pane fade" id="platos" role="tabpanel" aria-labelledby="platos-tab">.ffddfadds..padldwwwwww
+        </div>
+        <div class="tab-pane fade" id="comentarios" role="tabpanel" aria-labelledby="comentarios-tab">.ffddfadds..opaodlsjjd sad eyes</div>
+        <div class="tab-pane fade" id="pedidos" role="tabpanel" aria-labelledby="pedidos-tab">.ffddfadds..IPSUM</div>
+        <div class="tab-pane fade" id="lista-deseos" role="tabpanel" aria-labelledby="listdeseos-tab">.ffddfadds..Lorem</div>
+        <div class="tab-pane fade" id="roles" role="tabpanel" aria-labelledby="roles-tab">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sequi doloremque repellendus unde dolorum voluptatibus, cumque ratione in quasi sapiente quis dicta voluptatem reiciendis aliquam delectus fuga molestiae harum alias.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+{% endblock %}
