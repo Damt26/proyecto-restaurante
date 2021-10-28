@@ -1,3 +1,4 @@
+from types import MethodType
 from flask import Flask, render_template, request, flash
 from werkzeug.utils import redirect
 import sqlite3
@@ -22,6 +23,13 @@ def menu():
     if request.method == 'GET':
         return render_template('menuPlatos.html')
 
+
 @app.route('/dashboard', methods=['GET'])
 def dashboard():
     return render_template('dashboard.html')
+
+
+@app.route('/registro', methods=['GET', 'POST'])
+def registro():
+    if request.method == 'GET':
+        return render_template('registro.html')

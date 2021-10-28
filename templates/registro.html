@@ -1,0 +1,89 @@
+{% extends "layout/plantilla.html" %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        body { background-color: #ddeaf7; }
+    </style>
+{% endblock %}
+{% block content %}
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-12 m-4"><h1 class="text-center">Registrate</h1></div>
+            <div class="col-md-12">
+                <p>Registrate con nosotros, se parte de la familia que conforman nuestros clientes 
+                    y disfruta de los beneficios que te ofrecemos al integrarte </p>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-4  w-50" id="form-registro">
+        <div class="row align-items-center ml-4" id="fila">
+            <div class="col-md-9" id="form">
+                <form action="" method="post" class="m-4">
+                    <div class="form-group">
+                        <label for="tipo_id">Seleccione su tipo de identificacion</label>
+                        <select name="tipo_id" id="tipo_id" class="form-control">
+                            <option value="-1">--Seleccione una opcion--</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="identificacion">Identificacion</label>
+                        <input type="number" class="form-control" id="identificacion" required="required"> 
+                        <small class="form-text text-muted">Ingrese solo números. Campo obligatorio</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="nombres">Nombre(s)</label>
+                        <input type="text" class="form-control" id="nombres" required="required">
+                        <small class="form-text text-muted">Ingrese solo texto. Campo obligatorio</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="apellidos">Apellido(s)</label>
+                        <input type="text" class="form-control" id="apellidos" required="required">
+                        <small class="form-text text-muted"> Ingrese solo texto. Campo obligatorio</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="genero">Seleccione su género</label>
+                        <select name="genero" id="genero" class="form-control">
+                            <option value="-1">--Seleccione una opcion--</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="direccion">Dirección de residencia</label>
+                        <input type="text" id="direccion" class="form-control" required="required">
+                        <small class="form-text text-muted">Campo obligatorio</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="ciudad">Seleccione ciudad de residencia</label>
+                        <select name="ciudad" id="ciudad" class="form-control">
+                            <option value="-1">--Seleccione una opcion--</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" class="form-control" required="required">
+                        <small class="form-text text-muted">Campo obligatorio</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="fech_nac">Fecha de nacimiento</label>
+                        <input type="date" id="fech_nac" class="form-control" required="required">
+                        <small class="form-text text-muted">Campo obligatorio</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="nombres">Email</label>
+                        <input type="text" class="form-control" id="email" required="required">
+                        <small class="form-text text-muted">Ingrese solo texto. Campo obligatorio</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="usuario">Usuario</label>
+                        <input type="text" class="form-control" id="usuario" required="required">
+                        <small class="form-text text-muted">El usuario puede contener solo letras y numeros</small>
+                    <div class="form-group">
+                        <label for="password">Contraseña</label>
+                        <input type="password" class="form-control" id="password" required="required">
+                        <small class="form-text text-muted">Mínimo 8 caracteres. Campo obligatorio</small>
+                    </div>
+                    <input type="submit" value="Guardar" class="btn btn-danger">
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

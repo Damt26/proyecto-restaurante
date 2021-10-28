@@ -172,5 +172,22 @@ none*/
       
   }
 
-  
+  #form-registro{
+    border: groove #d6817c;
+    border-radius: 10px;
+    background-color: #ebbcbb;
+    font-family:"big_noodle_titling";
+    font-size: 20px;
+}
+
+.container p{
+    font-family: "Awesome";
+    font-size: 30px;
+}
+
+.container h1{
+    font-family: "Dunkin";
+    font-size: 50px;
+    color:#ff0d00 ;
+}
  
