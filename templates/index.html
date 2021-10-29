@@ -2,7 +2,7 @@
 {% block content %}
 {% include 'template/header.html' %}
 {% include 'template/menu.html' %}
-<div class="container">
+<div class="container" style="font-family: FiraSans-Bold;">
     <div class="row align-items-center mb-4 mt-4">
         <div class="col-8">
             <div id="slider" class="carousel slide" data-ride="carousel">
@@ -53,37 +53,53 @@
         </div>
     </div>
     <!--row-->
-    <div class="row" id="subtitulo">
+    <div class="row">
         <div class="col-12">
             <h1 class="text-center">Platos destacados</h1>
-        </div>
+        
+</div>
     </div>
     <div class="row mt-2">
         
         <div class="col-md-4">
             <div class="card">
-                <img src="{{url_for('static', filename='images/bebida.gif')}}" class="card-img-top img-fluid">
+                <div class="card-header">
+                    <h5>Jugo de naranja</h5>
+
+                </div>
                 <div class="card-body">
-                    <h5 class="card-title">Jugo de naranja</h5>
-                    <a href="#" class="btn btn-primary">Ver plato</a>
+                    <img src="{{url_for('static', filename='images/bebida.gif')}}" class="card-img-top img-fluid">
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-outline-danger btn-block" role="button">Ver plato</a>
+
                 </div>
             </div>
         </div>
         <div class="col-md-4">
             <div class="card">
-                <img src="{{url_for('static', filename='images/comida-rapida.jpg')}}" class="card-img-top img-fluid">
+                <div class="card-header">
+                    <h5>Perro italosuizo</h5>
+                </div>
                 <div class="card-body">
-                    <h5 class="card-title">Perro italosuizo</h5>
-                    <a href="#" class="btn btn-primary">Ver plato</a>
+                     <img src="{{url_for('static', filename='images/comida-rapida.jpg')}}" class="card-img-top img-fluid">
+                </div>
+               
+                <div class="card-footer">
+                    <a href="#" class="btn btn-outline-danger btn-block" role="button">Ver plato</a>
                 </div>
             </div>
         </div>
         <div class="col-md-4">
             <div class="card">
-                <img src="{{url_for('static', filename='images/plato-fuerte.jpg')}}" class="card-img-top img-fluid">
+                <div class="card-header">
+                    <h5>Pollo cocido con verduras</h5>
+                </div>
                 <div class="card-body">
-                    <h5 class="card-title">Pollo cocido con verduras</h5>
-                    <a href="#" class="btn btn-primary">Ver plato</a>
+                    <img src="{{url_for('static', filename='images/plato-fuerte.jpg')}}" class="card-img-top img-fluid">
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-outline-danger btn-block" role="button">Ver plato</a>
                 </div>
             </div>
         </div>

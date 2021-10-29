@@ -1,11 +1,15 @@
 {% extends "layout/plantilla.html" %}
 {% block content %}
-<div class="container w-50 h-50" id="login-form">
-    <div class="row g-3 align-items-center">
-        <div class="col-12">
+<br><br>
+<body id="login">
+    <div class="container w-50 h-50">
+    <div class="card bg-dark mx-auto">
+        <div class="card-header">
             <h1 class="text-center" style="font-family: FiraSans-Bold;">
                 Iniciar sesión
             </h1>
+        </div>
+        <div class="card-body">
             <form action="#" method="post">
                 <div class="form-group">
                     <label for="user">Nombre</label>
@@ -18,13 +22,15 @@
                 <div class="form-group">
                     <small class="form-text">¿Olvidó su contraseña?</small>
                 </div>
-                <input type="submit" value="Ingresar" class="btn btn-success">
+                <input type="submit" value="Ingresar" class="btn btn-outline-success btn-block">
             </form>
         </div>
     </div>
-    
 </div>
-<div class="container-fluid" >
+
+</body>
+
+<div class="container-fluid">
     <div id="pie" class="row align-items-center">
         <div class="col-12">
             <p class="text-center"></p>
@@ -33,24 +39,22 @@
 </div>
 
 <style type="text/css">
-    body{
-        background:linear-gradient(#dfdede, #e4e3e3);
+    body {
+        background: linear-gradient(#dfdede, #e4e3e3);
         height: 600px;
     }
 
-    .container-fluid{
-        position: relative; 
+    .container-fluid {
+        position: relative;
         top: 300px;
         background-color: #5f5d5d;
         height: 52px;
     }
 
-    .container-fluid div p{
+    .container-fluid div p {
         color: aliceblue;
         margin-top: 10px;
     }
-
-   
 </style>
 <script type="text/javascript">
     const date = new Date();

@@ -1,13 +1,54 @@
-<div class="container-fluid mt-2 mb-2">
-    <div class="offset-xl-9 col-xl-3 col-md-12">
-        <a type="button" class="btn btn-sm ml-5" id="login" href="/login">Iniciar sesión</a>
-        <a type="button" class="btn btn-sm ml-3" id="registro">Registrarse</a>
-    </div>
-</div>
 <div class="container-fluid">
     <div class="row align-items-center p-5 m-1" id="encabezado">
         <div class="col-md-12">
-            <h2 class="titulo text-center">Bienvenidos a Donkin' Donuts</h2>
+            <h2 class="font_dunkin text-center text-body " style="font-family: FiraSans-Bold; font-size: 25px;">Bienvenidos a</h2>
+                <h2 class="font_dunkin text-center text-danger " style="font-size: 35px;background-color: white;border-radius:15px;background-size: cover;">Donkin' Donuts</h2>
         </div>
     </div>
 </div>
+<nav class="navbar navbar-expand-md fixed-top bg-danger ">
+    <!-- Brand -->
+    <a class=" navbar-brand text-white font_dunkin" href="#">Donkin' Donuts</a>
+    <!-- CENTER-ITEMS -->
+
+    <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+        <ul class="navbar-nav mx-auto" style="font-family: FiraSans-Bold;">
+            <li class="nav-item">
+                <a href="#" class="nav-link">Inicio</a>
+            </li>
+            <li class="nav-item ml-4">
+                <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" data-toggle="dropdown"
+                    aria-haspopup="true" role="button" aria-expanded="false">Menú</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a href="/menu" class="dropdown-item">Platos</a>
+                    <div class="dropdown-divider"></div>
+                    <a href="" class="dropdown-item">Lista de deseos</a>
+                    <div class="dropdown-divider"></div>
+                    <a href="" class="dropdown-item">Pedidos realizados</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown ml-4">
+                <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" data-toggle="dropdown"
+                    aria-haspopup="true" role="button" aria-expanded="false">Quienes somos</a>
+                <div class="dropdown-menu mt-2" aria-labelledby="navbarDropdown">
+                    <a href="" class="dropdown-item">Política de protección de datos</a>
+                    <div class="dropdown-divider"></div>
+                    <a href="" class="dropdown-item">Términos y condiciones</a>
+                </div>
+            </li>
+            <li class="nav-item ml-4">
+                <a href="#" class="nav-link">Contactenos</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- REGISTRO-INGRESO -->
+    <ul class="navbar-nav ml-auto" style="font-family: FiraSans-Bold;">
+        <li class="nav-item">
+            <a role="button" class="btn bg-light text-dark" href="/login">Iniciar sesión</a>
+        </li>
+        <li class="nav-item" style="padding-left:15px">
+            <a role="button" class="btn bg-light text-dark">Registrarse</a>
+        </li>
+    </ul>
+</nav>

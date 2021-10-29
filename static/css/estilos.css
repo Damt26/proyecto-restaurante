@@ -94,6 +94,10 @@ inset = por dentro,
 outset = efecto contrario de inset,
 hidden = oculto
 none*/
+
+a{
+    text-decoration: none !important;
+}
 #encabezado{
     
     border: solid #DE423A; 
@@ -101,12 +105,15 @@ none*/
     border-radius:8px ;
     /*background-image: linear-gradient(#ffffff, #f7a6a2);*/
     background-image: url(../images/banner1.jpg);
+    background-size: cover;
     background-position: right top;
     opacity: 0.9;
     height: 300px;
     
 }
-
+#login{
+    background-image: url(../images/menu.jpg);
+    background-size: cover;}
 .titulo {
     font-family: 'Dunkin'; 
     color: #ff0d00;
@@ -114,7 +121,11 @@ none*/
     font-size: 45px;
    
  }
-
+.font_dunkin {
+    font-family: 'Dunkin'; 
+    opacity: 1;
+    font-size: 15px;
+}
  .nav-item:hover{
     color: #DE423A;
  }
@@ -150,12 +161,6 @@ none*/
     color: aliceblue;
 }
 
-#footer{
-    background-color: #3a3838;
-    margin: 10px;
-    
-}
-
 .carousel-inner img {
     width: 100%;
     height: 100%;
@@ -164,10 +169,4 @@ none*/
   #subtitulo h1{
     font-family: "Mat Saleh";
     color: #e0655f;
-  }
-
-  #login-form{
-      position: relative;
-      top: 100px;
-      
   }
